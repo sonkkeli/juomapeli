@@ -1,28 +1,26 @@
 import React,{useState} from 'react';
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 
 const App = () => {
   const [player,newPlayer] = useState([])
   const [playerFiel,newPlayerFiel] = useState("")
 
-
-
   const addNewPlayer = (event) => {
     event.preventDefault()
-    let player = event.targer.value
-    const newList = [...player]
-    newList.push(player)
-    newPlayer(newList)
+    const copy = [...player]
+    copy.push(playerFiel)
+    newPlayer(copy)
+    console.log(player.length)
   }
 
   const changePlayerInputFied = (event) => {
     newPlayerFiel(event.target.value)
+    console.log(playerFiel)
   }
 
   return (
     <div className="App">
-       <form onSubmit={addNote}>
+       <form onSubmit={addNewPlayer}>
         <input
           value={playerFiel}
           onChange={changePlayerInputFied}
