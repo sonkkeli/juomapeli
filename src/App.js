@@ -8,8 +8,19 @@ const tasks = require('./tasks.json');
 console.log(tasks)
 
 const App = () => {
-  const [player,newPlayer] = useState(["santeri","sonja"])
+  const [player,newPlayer] = useState([])
+  const [task, setTask] = useState([])
   const [playerFiel,newPlayerFiel] = useState("")
+
+  const handleNextTask = (event) => {
+    event.preventDefault()
+    setTask(randomTask)
+    console.log(task)
+  }
+
+  const randomTask = () => {
+    return tasks[Math.floor(Math.random() * tasks.length)]
+  }
 
   const addNewPlayer = (event) => {
     event.preventDefault()
@@ -32,8 +43,8 @@ const App = () => {
   
 
   return (
-    <div >
-      <div className="navbar navbar-light bg-light">
+    <div className="text-center" >
+      <div className="jumbotron">
         <form onSubmit={addNewPlayer}>
           <input
             value={playerFiel}
@@ -48,8 +59,8 @@ const App = () => {
       </div>
        
 
-      <div className="jumbotron" >
-        <TaskGenerator tasks={tasks}/>
+      <div  >
+        <TaskGenerator task={task} handleNextTask={handleNextTask}/>
       </div>      
     </div>
   );

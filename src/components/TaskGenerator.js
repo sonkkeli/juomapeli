@@ -1,15 +1,12 @@
 import React from 'react'
+import './task.css'
 
-const TaskGenerator = ({tasks}) => {
-    const randomTask = () => {
-        const newTask = tasks[Math.floor(Math.random() * tasks.length)]
-        console.log(newTask)
-    }
-    
+const TaskGenerator = ({task, handleNextTask}) => {
 
     return (
-        <div>
-            <button onClick={randomTask} className="btn-dark btn ml-2" >Seuraava</button>
+        <div className="task-background jumbotron">
+            <p className="display-2">{task.description}</p>
+            <button onClick={handleNextTask} className="btn-dark btn ml-2" >Next plz</button>
         </div>
     )
     

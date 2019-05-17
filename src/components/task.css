@@ -1,0 +1,6 @@
+.task-background {
+    background-image: url('assets/partypic.jpg'); 
+    background-size: 100%;
+    width:100%;
+    overflow: hidden;
+}
