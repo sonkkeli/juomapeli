@@ -47,7 +47,7 @@ const App = () => {
       </div>
        
 
-      <div className="jumbotron" >
+      <div  >
         <TaskGenerator task={task} handleNextTask={handleNextTask}/>
       </div>      
     </div>
