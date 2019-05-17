@@ -5,7 +5,6 @@ import Player from './components/Player'
 
 
 const tasks = require('./tasks.json');
-console.log(tasks)
 
 const App = () => {
   const [player,newPlayer] = useState([])
@@ -27,26 +26,34 @@ const App = () => {
   const addNewPlayer = (event) => {
     event.preventDefault()
     const copy = [...player]
-    copy.push(playerFiel)
+
+    let uusipelaaja = ''
+
+    if (playerFiel.length > 1){
+      uusipelaaja = playerFiel[0].toUpperCase() + playerFiel.slice(1);
+    } else {
+      uusipelaaja = playerFiel[0].toUpperCase()
+    }
+    
+    copy.push(uusipelaaja)
     newPlayer(copy)
-    console.log(player)
     newPlayerFiel("")
   }
 
   const changePlayerInputFied = (event) => {
     newPlayerFiel(event.target.value)
-    // console.log(playerFiel)
   }
 
-  const printPlayers = () => player.map(string => 
-  <Player name = {string}/>
-  )
-
+  const hasPlayers = () => {
+    if (player.length > 0){
+        return <span className="player-list">Players: </span>
+    }
+  }
   
 
   return (
     <div className="text-center" >
-      <div className="jumbotron">
+      <div className="mt-4 mb-4 align-baseline">
         <form onSubmit={addNewPlayer}>
           <input
             value={playerFiel}
@@ -57,7 +64,9 @@ const App = () => {
       </div>
       
       <div>
-        {printPlayers()}
+        {hasPlayers()}
+        <Player players={player}/>
+        
       </div>
        
 
