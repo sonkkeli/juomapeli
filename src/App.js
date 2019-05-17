@@ -1,8 +1,9 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="display-4">
       Hello
     </div>
   );
