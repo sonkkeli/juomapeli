@@ -2,15 +2,34 @@
 
 {
     "id" : 1,
-    "description" : "pieru"
+    "description" : "Drink a bellyshot from player that is next to you"
 },
 {
     "id" : 2,
-    "description" : "perse"
+    "description" : "Empty you friends glass while singing the national anthem of Finland"
 },
 {
     "id" : 3,
-    "description" : "paska"
+    "description" : "Dance a bellydance"
+},
+{
+    "id" : 4,
+    "description" : "Take a sip"
+},
+{
+    "id" : 4,
+    "description" : "Kiss a player that is the same sex as you are"
+},
+
+{
+    "id" : 5,
+    "description" : "Empty your DRINK NOW, YOU HAVE 5 Seconds HURRY"
 }
+,
+{
+    "id" : 6,
+    "description" : "Have a cup of Water"
+}
+
 
 ]
