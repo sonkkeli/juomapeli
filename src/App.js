@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-
-
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css'
 
 const App = () => {
   const [player,newPlayer] = useState([])
