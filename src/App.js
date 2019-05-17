@@ -1,9 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
+
+
 
 const App = () => {
+  const [player,newPlayer] = useState([])
+  const [playerFiel,newPlayerFiel] = useState("")
+
+
+
+  const addNewPlayer = (event) => {
+    event.preventDefault()
+    let player = event.targer.value
+    const newList = [...player]
+    newList.push(player)
+    newPlayer(newList)
+  }
+
+  const changePlayerInputFied = (event) => {
+    newPlayerFiel(event.target.value)
+  }
+
   return (
     <div className="App">
-      Hello
+       <form onSubmit={addNote}>
+        <input
+          value={playerFiel}
+          onChange={changePlayerInputFied}
+        />
+        <button type="submit">tallenna</button>
+      </form>
     </div>
   );
 }
