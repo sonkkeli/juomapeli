@@ -9,7 +9,7 @@ const TaskGenerator = ({tasks}) => {
 
     return (
         <div>
-            <button onClick={randomTask}>Seuraava</button>
+            <button onClick={randomTask} className="btn-dark btn ml-2" >Seuraava</button>
         </div>
     )
     
