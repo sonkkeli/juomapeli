@@ -9,15 +9,17 @@ const App = () => {
   const [player,newPlayer] = useState([])
   const [task, setTask] = useState([])
   const [playerFiel,newPlayerFiel] = useState("")
+  const [ chosenPlayer, setChosenPlayer ] = useState("")
 
   const handleNextTask = (event) => {
     event.preventDefault()
+    const randomTask =tasks[Math.floor(Math.random() * tasks.length)]
     setTask(randomTask)
     console.log(task)
-  }
 
-  const randomTask = () => {
-    return tasks[Math.floor(Math.random() * tasks.length)]
+    const randomPlayer =player[Math.floor(Math.random() * player.length)]
+    setChosenPlayer(randomPlayer)
+    console.log(chosenPlayer)
   }
 
   const addNewPlayer = (event) => {
@@ -31,7 +33,7 @@ const App = () => {
 
   const changePlayerInputFied = (event) => {
     newPlayerFiel(event.target.value)
-    console.log(playerFiel)
+    // console.log(playerFiel)
   }
 
   return (
@@ -48,7 +50,7 @@ const App = () => {
        
 
       <div  >
-        <TaskGenerator task={task} handleNextTask={handleNextTask}/>
+        <TaskGenerator task={task} player={chosenPlayer} handleNextTask={handleNextTask}/>
       </div>      
     </div>
   );
