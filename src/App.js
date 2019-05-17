@@ -1,12 +1,14 @@
 import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import TaskGenerator from './components/TaskGenerator'
+import Player from './components/Player'
+
 
 const tasks = require('./tasks.json');
 console.log(tasks)
 
 const App = () => {
-  const [player,newPlayer] = useState([])
+  const [player,newPlayer] = useState(["santeri","sonja"])
   const [playerFiel,newPlayerFiel] = useState("")
 
   const addNewPlayer = (event) => {
@@ -23,6 +25,12 @@ const App = () => {
     console.log(playerFiel)
   }
 
+  const printPlayers = () => player.map(string => 
+  <Player name = {string}/>
+  )
+
+  
+
   return (
     <div >
       <div className="navbar navbar-light bg-light">
@@ -33,6 +41,10 @@ const App = () => {
           />
           <button className="btn-dark btn ml-2" type="submit">tallenna</button>
         </form>
+      </div>
+      
+      <div>
+        {printPlayers()}
       </div>
        
 
