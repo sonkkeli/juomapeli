@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import TaskGenerator from './components/TaskGenerator'
 
@@ -11,26 +11,33 @@ const App = () => {
 
   const addNewPlayer = (event) => {
     event.preventDefault()
-    let player = event.targer.value
-    const newList = [...player]
-    newList.push(player)
-    newPlayer(newList)
+    const copy = [...player]
+    copy.push(playerFiel)
+    newPlayer(copy)
+    console.log(player.length)
   }
 
   const changePlayerInputFied = (event) => {
     newPlayerFiel(event.target.value)
+    console.log(playerFiel)
   }
 
   return (
-    <div className="App">¨
-      <TaskGenerator tasks={tasks}/>
-       {/* <form onSubmit={}>
-        <input
-          value={playerFiel}
-          onChange={changePlayerInputFied}
-        />
-        <button type="submit">tallenna</button>
-      </form> */}
+    <div >
+      <div className="navbar navbar-light bg-light">
+        <form onSubmit={addNewPlayer}>
+          <input
+            value={playerFiel}
+            onChange={changePlayerInputFied}
+          />
+          <button className="btn-dark btn ml-2" type="submit">tallenna</button>
+        </form>
+      </div>
+       
+
+      <div className="jumbotron" >
+        <TaskGenerator tasks={tasks}/>
+      </div>      
     </div>
   );
 }
