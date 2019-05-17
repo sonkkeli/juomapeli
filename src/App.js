@@ -10,7 +10,8 @@ const App = () => {
     const copy = [...player]
     copy.push(playerFiel)
     newPlayer(copy)
-    console.log(player.length)
+    console.log(player)
+    newPlayerFiel("")
   }
 
   const changePlayerInputFied = (event) => {
