@@ -6,7 +6,7 @@
 },
 {
     "id" : 2,
-    "description" : "Empty you friends glass while singing the national anthem of Finland"
+    "description" : "Empty you friends glass while singing the Finnish national anthem"
 },
 {
     "id" : 3,
@@ -14,22 +14,119 @@
 },
 {
     "id" : 4,
-    "description" : "Take a sip"
+    "description" : "Just drink your sips loser"
 },
 {
     "id" : 4,
-    "description" : "Kiss a player that is the same sex as you are"
+    "description" : "Kiss a player who's the same sex as you are"
 },
-
 {
     "id" : 5,
-    "description" : "Empty your DRINK NOW, YOU HAVE 5 Seconds HURRY"
-}
-,
+    "description" : "Empty your drink NOW, you have 5 secs so HURRY!"
+},
 {
     "id" : 6,
-    "description" : "Have a cup of Water"
+    "description" : "Drink a cup of water"
+},
+{
+    "id" : 7,
+    "description" : "Make a Rule, which everyone has to follow, disobedience leads to a fee of 2 sips"
+},
+{
+    "id" : 8,
+    "description" : "Kiss a player who's the opposite sex as you are"
+},
+{
+    "id" : 9,
+    "description" : "Waterfall(Everyone drinks until the person next to them stops)"
+},
+{
+    "id" : 10,
+    "description" : "Everyone except you must finish their drink :("
+},
+{
+    "id" : 11,
+    "description" : "Pick someone to drink with their opposite hand for the rest of the game"
+},
+{
+    "id" : 12,
+    "description" : "List car brands, the first loser drinks the bet"
+},
+{
+    "id" : 13,
+    "description" : "List shampoo brands, the first loser drinks the bet"
+},
+{
+    "id" : 14,
+    "description" : "Describe your first impression of a person on your right"
+},
+{
+    "id" : 15,
+    "description" : "Everybody changes their seats"
+},
+{
+    "id" : 16,
+    "description" : "No bad language by anybody, a sip for every swearword for the next 10mins"
+},
+{
+    "id" : 17,
+    "description" : "Call everyone in the game a bitch when you talk to them for the next 10mins"
+},
+{
+    "id" : 18,
+    "description" : "Finish your drink! :("
+},
+{
+    "id" : 19,
+    "description" : "List tobacco brands, the first loser drinks the bet"
+},
+{
+    "id" : 20,
+    "description" : "The next person must take their turn sitting on your lap"
+},
+{
+    "id" : 21,
+    "description" : "Every time you give a sip, you take a sip for the next 10 mins"
+},
+{
+    "id" : 22,
+    "description" : "The tallest person at the table must take 4 drinks then give 4 drinks"
+},
+{
+    "id" : 23,
+    "description" : "The shortest person at the table must take 4 drinks then give 4 drinks"
+},
+{
+    "id" : 24,
+    "description" : "You must play the rest of the game wearing no socks"
+},
+{
+    "id" : 25,
+    "description" : "You can only talk to inanimate objects (not people) for the rest of the game"
+},
+{
+    "id" : 26,
+    "description" : "Give all players  a new name.  All players must use the new names, or drink 1 every time they fail."
+},
+{
+    "id" : 27,
+    "description" : "Give 3 reasons why Trump is smarter than Putin or drink 4"
+},
+{
+    "id" : 28,
+    "description" : "You must compliment the person to your left"
+},
+{
+    "id:": 29,
+    "description" : "You must keep physical contact with the person to your right for the remainder of the game"
+},
+{
+    "id" : 30,
+    "description": "You can only talk to inanimate objects (not people) for the rest of the game"
+},
+{
+    "id": 31,
+    "description": "The last person to switch their socks to their opposite feet drinks the bet"
 }
-
 
 ]

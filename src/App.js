@@ -4,6 +4,7 @@ import TaskGenerator from './components/TaskGenerator'
 import Player from './components/Player'
 import './components/task.css'
 
+// ideas for tasks: http://www.connactivity.com/~csniezek/Jenga/jengalist.html
 
 const tasks = require('./tasks.json');
 
