@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import TaskGenerator from './components/TaskGenerator'
 import Player from './components/Player'
+import './components/task.css'
 
 
 const tasks = require('./tasks.json');
@@ -14,11 +15,12 @@ const App = () => {
 
   const handleNextTask = (event) => {
     event.preventDefault()
+
     const randomTask =tasks[Math.floor(Math.random() * tasks.length)]
     setTask(randomTask)
     console.log(task)
 
-    const randomPlayer =player[Math.floor(Math.random() * player.length)]
+    const randomPlayer = player[Math.floor(Math.random() * player.length)]
     setChosenPlayer(randomPlayer)
     console.log(chosenPlayer)
   }
@@ -31,13 +33,19 @@ const App = () => {
 
     if (playerFiel.length > 1){
       uusipelaaja = playerFiel[0].toUpperCase() + playerFiel.slice(1);
-    } else {
-      uusipelaaja = playerFiel[0].toUpperCase()
-    }
+      copy.push(uusipelaaja)
+      newPlayer(copy)
+      newPlayerFiel("")
+      console.log(uusipelaaja)
+    } 
     
-    copy.push(uusipelaaja)
-    newPlayer(copy)
-    newPlayerFiel("")
+    if (playerFiel.length === 1){
+      uusipelaaja = playerFiel[0].toUpperCase()
+      copy.push(uusipelaaja)
+      newPlayer(copy)
+      newPlayerFiel("")
+      console.log(uusipelaaja)
+    }
   }
 
   const changePlayerInputFied = (event) => {
@@ -46,20 +54,21 @@ const App = () => {
 
   const hasPlayers = () => {
     if (player.length > 0){
-        return <span className="player-list">Players: </span>
+        return <span className="player-list">Tonight's players: </span>
     }
   }
   
 
   return (
-    <div className="text-center" >
-      <div className="mt-4 mb-4 align-baseline">
+    <div className="text-center background2" >
+      <div className="mt-4 mb-4">        
         <form onSubmit={addNewPlayer}>
+          <span className="player-list">Add players: </span>
           <input
             value={playerFiel}
             onChange={changePlayerInputFied}
           />
-          <button className="btn-dark btn ml-2" type="submit">tallenna</button>
+          <button className="btn-dark btn ml-2" type="submit">Save</button>
         </form>
       </div>
       
@@ -67,12 +76,12 @@ const App = () => {
         {hasPlayers()}
         <Player players={player}/>
         
-      </div>
-       
+      </div>       
 
-      <div  >
+      <div>
         <TaskGenerator task={task} player={chosenPlayer} handleNextTask={handleNextTask}/>
-      </div>      
+      </div>
+      <div className="footer player-list">Rules in short: Bet means that either you give or you drink.</div>   
     </div>
   );
 }

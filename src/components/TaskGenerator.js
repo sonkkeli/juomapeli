@@ -5,15 +5,23 @@ const TaskGenerator = ({task, player, handleNextTask}) => {
 
     const whoPlays = () => {
         if (player){
-            return <p className="display-4">Today's gamer is: {player}</p>
+            return <p className="task-info">Next gamer is: {player}</p>
         }
     }
 
+    const howManySips = () => {
+        if(task.id){
+            const amount= Math.floor(Math.random() * 5) + 2        
+            return <p className="task-info">The bet is {amount} sips</p>
+        }        
+    }
+
     return (
-        <div className="task-background jumbotron">
+        <div className="jumbotron">
             {whoPlays()}
-            <p className="display-2">{task.description}</p>
-            <button onClick={handleNextTask} className="btn-dark btn ml-2" >Next plz</button>
+            <p className="task-text"><span className="task-text-background">{task.description}</span></p>
+            {howManySips()}
+            <button onClick={handleNextTask} className="btn-dark btn ml-2 mb-4" >Next plz</button>
         </div>
     )    
 }
